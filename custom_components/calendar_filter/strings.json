@@ -1,0 +1,18 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "User",
+        "data": {
+          "calendar_entity": {
+            "title": "Calendar Entity",
+            "description": "The entity_id of the calendar to filter",
+            "example": "calendar.my_calendar",
+            "error": "Invalid entity_id",
+            "required": true
+          }
+        }
+      }
+    }
+  }
+}
