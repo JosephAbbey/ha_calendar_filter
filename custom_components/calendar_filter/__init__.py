@@ -14,7 +14,7 @@ async def async_setup(_hass: HomeAssistant, _config: dict) -> bool:
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up a config entry."""
     hass.async_create_task(
-        hass.config_entries.async_forward_entry_setup(entry, "calendar")
+        hass.config_entries.async_forward_entry_setups(entry, ["calendar"])
     )
     entry.async_on_unload(entry.add_update_listener(config_entry_update_listener))
     return True
